@@ -1,0 +1,57 @@
+{
+  "info": {
+    "name": "Whitelabel API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Auth - Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\": \"test@example.com\", \"password\": \"123456\"}"
+        },
+        "url": {
+          "raw": "http://devnology.local:3333/auth/login",
+          "host": [
+            "devnology.local"
+          ],
+          "port": "3333",
+          "path": [
+            "auth",
+            "login"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Products - Get all",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "url": {
+          "raw": "http://devnology.local:3333/products",
+          "host": [
+            "devnology.local"
+          ],
+          "port": "3333",
+          "path": [
+            "products"
+          ]
+        }
+      }
+    }
+  ]
+}
