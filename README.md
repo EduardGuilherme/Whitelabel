@@ -79,6 +79,19 @@ model User {
 
 ## ▶️ Rodar Backend
 
+Windows (PowerShell como Administrador)
+
+edite o arquivo de host 
+C:\Windows\System32\drivers\etc\hosts
+caso for rodar em Linux o caminho é esse sudo nano /etc/hosts
+
+adicione e depois salve o arquivo 
+
+127.0.0.1   devnology.local
+127.0.0.1   in8.local
+
+
+
 ``` bash
 npm install
 npx prisma generate
