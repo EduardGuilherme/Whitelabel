@@ -23,8 +23,8 @@ vinculado**, **produtos**, e **usuários associados**.
 
 ## ⚙️ Arquitetura
 
-    /backend
-    /frontend
+    /api
+    /app
 
 ## 🗄️ Banco -- Modelo Prisma
 
@@ -49,6 +49,20 @@ model User {
   client    Client?   @relation(fields: [clientId], references: [id])
 }
 ```
+
+## Diagrama 
+
++-----------------------+         +-----------------------+
+|       Client          | 1     N |         User          |
++-----------------------+---------+-----------------------+
+| id (PK)               |         | id (PK)               |
+| name                  |         | name                  |
+| url (unique)          |         | email (unique)        |
+| domain (unique)       |         | password              |
+| primaryColor          |         | createdAt             |
++-----------------------+         | updatedAt             |
+                                  | clientId (FK)         |
+                                  +-----------------------+
 
 ## 🔗 Endpoints
 
