@@ -1,4 +1,5 @@
 import 'package:app/core/http/http_client.dart';
+import 'package:app/modules/pages/create_user_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../services/auth_service.dart';
@@ -84,6 +85,15 @@ class _LoginPageState extends State<LoginPage> {
                 }
               },
               child: const Text("Entrar"),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const CreateUserPage()),
+                );
+              },
+              child: const Text("Criar Usuário"),
             ),
           ],
         ),
