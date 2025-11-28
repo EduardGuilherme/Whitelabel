@@ -51,7 +51,7 @@ model User {
 ```
 
 ## Diagrama 
-
+```
 +-----------------------+         +-----------------------+
 |       Client          | 1     N |         User          |
 +-----------------------+---------+-----------------------+
@@ -63,7 +63,7 @@ model User {
 +-----------------------+         | updatedAt             |
                                   | clientId (FK)         |
                                   +-----------------------+
-
+```
 ## 🔗 Endpoints
 
 ### POST /users
@@ -81,9 +81,9 @@ model User {
 
 Windows (PowerShell como Administrador)
 
-edite o arquivo de host 
+-    edite o arquivo de host 
 C:\Windows\System32\drivers\etc\hosts
-caso for rodar em Linux o caminho é esse sudo nano /etc/hosts
+-    caso for rodar em Linux o caminho é esse sudo nano /etc/hosts
 
 adicione e depois salve o arquivo 
 
