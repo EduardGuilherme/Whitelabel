@@ -5,9 +5,12 @@ import '../../../../core/http/http_client.dart';
 
 class AuthService extends ChangeNotifier {
   final _storage = FlutterSecureStorage();
+  String? currentDomain;
 
-  Future<bool> login(String email, String password) async {
+  Future<bool> login(String email, String password, String domain) async {
     try {
+      currentDomain = domain;
+
       final response = await HttpClient.dio.post("/auth/login", data: {
         "email": email,
         "password": password,
@@ -20,6 +23,7 @@ class AuthService extends ChangeNotifier {
 
       notifyListeners();
       return true;
+
     } catch (e) {
       debugPrint("Login error: $e");
       return false;
